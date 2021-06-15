@@ -1,0 +1,109 @@
+@mixin underlined {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color-1);
+  height: 1rem;
+  animation-name: underlined;
+  animation-duration: 1s;
+  width: 84%;
+}
+
+.menu {
+  position: relative;
+  top: 8rem;
+
+  &_food {
+    display: flex;
+    margin-bottom: 10rem;
+    @media only screen and (max-width: 56.25em) {
+      flex-direction: column;
+    }
+
+    &_header {
+      position: relative;
+      font-size: 8rem;
+      color: var(--main-color-1);
+      &::after {
+        @include underlined;
+      }
+    }
+
+    &_img {
+      margin-top: 8rem;
+      margin-left: 10rem;
+      width: 100%;
+      border: 2rem solid var(--main-color-3);
+      border-radius: 5px;
+      transition: all 1s;
+      @media only screen and (max-width: 56.25em) {
+        margin: 0;
+        width: 90%;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      &-cap {
+        font-size: 4rem;
+        margin-left: 10rem;
+        letter-spacing: 0.2rem;
+        transition: all 1s;
+        @media only screen and (max-width: 56.25em) {
+          margin: 0;
+        }
+      }
+      &:hover ~ &-cap {
+        transform: translateY(2.4rem);
+      }
+    }
+    &_img-small {
+      width: 50%;
+      border: 1rem solid var(--main-color-3);
+      border-radius: 5px;
+      margin-top: 4rem;
+      margin-left: 6rem;
+      transition: all 1s;
+      @media only screen and (max-width: 56.25em) {
+        flex-direction: column;
+        margin-left: 0;
+        width: 90%;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      &-cap-small {
+        font-size: 3rem;
+        margin-left: 6rem;
+        letter-spacing: 0.1rem;
+        transition: all 1s;
+        @media only screen and (max-width: 56.25em) {
+          margin: 0;
+        }
+      }
+      &:hover ~ &-cap-small {
+        transform: translateY(1.4rem);
+      }
+    }
+  }
+}
+.menu_food_main_sub {
+  text-align: center;
+  @media only screen and (max-width: 56.25em) {
+    display: flex;
+  }
+}
+.menu_food_main {
+  text-align: center;
+  @media only screen and (max-width: 56.25em) {
+    margin-top: 10rem;
+  }
+}
+@keyframes underlined {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 84%;
+  }
+}

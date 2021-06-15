@@ -17,6 +17,10 @@ module.exports = {
 <html>
   <head>
     <meta charset="utf-8" />
+    <script
+    src="https://kit.fontawesome.com/93092a9364.js"
+    crossorigin="anonymous"
+  ></script>
     <title>A-Chan's Shokudou</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>

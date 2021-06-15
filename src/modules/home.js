@@ -76,33 +76,6 @@ function createButton(text) {
   return btnContainer;
 }
 
-function createFooter() {
-  let footer = document.createElement("footer");
-  footer.classList.add("footer");
-
-  let restaurantName = document.createElement("p");
-  restaurantName.classList.add("footer_para");
-  restaurantName.textContent = `A-Chan's Shokudou`;
-
-  let img = document.createElement("img");
-  img.src = latern;
-  img.classList.add("footer_logo");
-
-  let restaurantAdress = document.createElement("p");
-  restaurantAdress.classList.add("footer_adress");
-  restaurantAdress.textContent = `Tokyo, Japan`;
-
-  let restaurantNumber = document.createElement("p");
-  restaurantNumber.classList.add("footer_number");
-  restaurantNumber.textContent = `5xx-xxx-xxx`;
-
-  footer.appendChild(restaurantName);
-  footer.appendChild(img);
-  footer.appendChild(restaurantAdress);
-  footer.appendChild(restaurantNumber);
-  return footer;
-}
-
 function createHomePage() {
   let contents = document.createElement("div");
   contents.classList.add("content");
@@ -122,11 +95,9 @@ function createHomePage() {
     contactPic
   );
 
-  let footer = createFooter();
   contents.appendChild(mainContent);
   contents.appendChild(menuContent);
   contents.appendChild(contactContent);
-  contents.appendChild(footer);
   return contents;
 }
 
